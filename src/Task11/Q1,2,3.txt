@@ -1,0 +1,79 @@
+Q1))
+
+In Java, there are four access modifiers available:
+
+Public: 
+	This is the most permissive access modifier. A public class, method, or variable can be accessed from any other class or package. It has the widest accessibility.
+
+Protected: 
+	A protected class, method, or variable can be accessed within the same package or by subclasses in different packages. It provides access to the class itself, subclasses, and other classes in the same package, but not to classes in different packages that are not subclasses.
+
+Default (package-private): 
+	If no access modifier is specified, it is considered the default access level. A class, method, or variable with default access can be accessed within the same package but not from other packages.
+
+Private: 
+	The private access modifier provides the most restrictive access. A private class, method, or variable can only be accessed within the same class. It is not accessible from any other class or package, including subclasses.
+
+The significance of these access modifiers in terms of class, method, and variable accessibility can be summarized as follows:
+
+Class Accessibility: 
+	The access modifier applied to a class determines where the class can be accessed from. A public class can be accessed from anywhere, while a default or package-private class is accessible only within the same package. Private classes are not accessible from any other class.
+
+Method Accessibility: 
+	The access modifier applied to a method determines who can invoke or call the method. Public methods can be called from anywhere. Protected and default methods can be called within the same package or by subclasses. Private methods are only accessible within the same class.
+
+Variable Accessibility: 
+	The access modifier applied to a variable determines where the variable can be accessed from. Public variables can be accessed from anywhere. Protected and default variables can be accessed within the same package or by subclasses. Private variables are only accessible within the same class.
+
+
+
+Q2))-----------------------------------------------------------------------------------------
+
+In Java, both exceptions and errors are subclasses of the Throwable class, but they serve different purposes and have different characteristics:
+
+Exceptions: 
+
+    Exceptions are exceptional conditions that occur during the execution of a program. They are typically caused by error conditions that can be caught and handled by the program. Exceptions are divided into two categories:
+        Checked Exceptions: 
+            These are exceptions that must be declared in a method's signature or caught using a try-catch block. Examples include IOException, SQLException, and ClassNotFoundException. Checked exceptions are typically caused by external factors such as I/O failures or database connectivity issues, and the program is expected to handle or recover from these exceptions.
+
+        Unchecked Exceptions (Runtime Exceptions): 
+            These exceptions do not require explicit handling or declaration. They are usually caused by programming errors or logical mistakes, such as null pointer dereferences (NullPointerException) or array index out of bounds (ArrayIndexOutOfBoundsException). Unchecked exceptions can be caught and handled, but it is not mandatory. If they are not caught, they propagate up the call stack until they are caught or result in program termination.
+
+Errors: 
+
+    Errors, on the other hand, are severe issues that generally indicate unrecoverable problems or conditions that are beyond the control of the application. Errors are typically caused by external factors or failures in the runtime environment. Examples of errors include OutOfMemoryError, StackOverflowError, and NoClassDefFoundError. Errors are usually not caught or handled by the program because they often indicate critical issues that cannot be recovered from. When an error occurs, it usually leads to the termination of the application.
+
+In summary, exceptions are intended to be caught, handled, and recovered from, while errors indicate serious problems that are typically not recoverable and may result in the termination of the application. Exceptions are part of the normal flow of a program, while errors are unexpected and often indicate issues at a system level.
+
+
+Q3))-----------------------------------------------------------------------------------------
+
+The main differences between checked exceptions and unchecked exceptions in Java are as follows:
+
+Checked Exceptions:
+
+    1) Checked exceptions are exceptions that must be either declared in the method signature using the throws keyword or caught and handled using a try-catch block.
+    2) Checked exceptions are typically used for conditions that the programmer can reasonably anticipate and recover from.
+    3) Examples of checked exceptions include IOException, SQLException, and ClassNotFoundException.
+    4) Checked exceptions are subclasses of Exception (excluding subclasses of RuntimeException and its subclasses).
+    5) The compiler enforces handling or declaration of checked exceptions, ensuring that the code either handles the exception or declares it in the method signature.
+    6)Checked exceptions are part of the method's contract, indicating that the caller of the method should be aware of and handle the potential exceptions that can be thrown.
+    7) If a checked exception is not caught or declared, the code will not compile.
+
+
+Unchecked Exceptions (Runtime Exceptions):
+
+    1) Unchecked exceptions, also known as runtime exceptions, do not require explicit declaration or catching. They can be caught and handled, but it is not mandatory.
+    2) Unchecked exceptions are typically programming errors or logical mistakes that the programmer should aim to prevent during development.
+    3) Examples of unchecked exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and IllegalArgumentException.
+    4) Unchecked exceptions are subclasses of RuntimeException or its subclasses.
+    5) The compiler does not enforce catching or declaring unchecked exceptions.
+    6) Unchecked exceptions indicate problems that occur at runtime and are not part of the normal expected flow of a program.
+    7) If an unchecked exception is not caught, it propagates up the call stack until it is caught or results in program termination.
+
+In summary, checked exceptions are intended to be caught and handled or declared in the method signature, while unchecked exceptions do not require explicit handling or declaration. Checked exceptions are typically used for anticipated exceptional conditions that can be recovered from, while unchecked exceptions are generally caused by programming errors and logical mistakes.
+
+
+Q4))-----------------------------------------------------------------------------------------
+
